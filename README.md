@@ -9,15 +9,21 @@
 
 ## About AuthNinja
 
-AuthNinja is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+AuthNinja is a new cloud-based authentication system that provides a comprehensive suite of features for securing web and mobile applications. AuthNinja is easy to use and integrate into existing applications, and it offers a wide range of features, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [User registration and login].
+- [User management].
+- [License management].
+- [Webhook Notifications].
+- [Two-factor authentication].
+- [Email verification].
+- [Social login]).
+- [Password reset].
+- [Session management].
+- [IP address and location tracking].
+- [Audit logging].
+
+AuthNinja is also a very secure authentication system. It uses state-of-the-art security algorithms to protect user data, and it is fully compliant with all major security standards.
 
 
 ## Learning Laravel
