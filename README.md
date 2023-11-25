@@ -11,17 +11,17 @@
 
 AuthNinja is a new cloud-based authentication system that provides a comprehensive suite of features for securing web and mobile applications. AuthNinja is easy to use and integrate into existing applications, and it offers a wide range of features, such as:
 
-- [User registration and login].
-- [User management].
-- [License management].
-- [Webhook Notifications].
-- [Two-factor authentication].
-- [Email verification].
-- [Social login]).
-- [Password reset].
-- [Session management].
-- [IP address and location tracking].
-- [Audit logging].
+- User registration and login.
+- User management.
+- License management.
+- Webhook Notifications.
+- 2FA authentication.
+- Email verification.
+- Social login.
+- Password reset.
+- Session management.
+- IP address and location tracking.
+- Audit logging.
 
 AuthNinja is also a very secure authentication system. It uses state-of-the-art security algorithms to protect user data, and it is fully compliant with all major security standards.
 
