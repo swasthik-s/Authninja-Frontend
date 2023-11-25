@@ -1,12 +1,12 @@
 <script setup>
 import { ref } from 'vue';
 import { useForm } from '@inertiajs/vue3';
-import ActionSection from '@/Components/ActionSection.vue';
-import DangerButton from '@/Components/DangerButton.vue';
-import DialogModal from '@/Components/DialogModal.vue';
-import InputError from '@/Components/InputError.vue';
-import SecondaryButton from '@/Components/SecondaryButton.vue';
-import TextInput from '@/Components/TextInput.vue';
+import ActionSection from '@/Components/Shared/ActionSection.vue';
+import DangerButton from '@/Components/Shared/DangerButton.vue';
+import DialogModal from '@/Components/Shared/DialogModal.vue';
+import InputError from '@/Components/Shared/InputError.vue';
+import SecondaryButton from '@/Components/Shared/SecondaryButton.vue';
+import TextInput from '@/Components/Shared/TextInput.vue';
 
 const confirmingUserDeletion = ref(false);
 const passwordInput = ref(null);
