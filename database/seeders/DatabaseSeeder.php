@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $user = User::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@authninja.com',
+            'role' => 'admin',
         ]);
         $role = Role::create(['name' => 'Admin']);
         $user->assignRole($role);
