@@ -1,31 +1,40 @@
 <script setup>
-import {ref} from "vue";
-import Sidebar from "@/Components/Sidebar/Sidebar.vue";
-import MainHeader from "@/Components/Header/MainHeader.vue";
-import SidebarOpenButton from "@/Assets/SVG/Sidebar/SidebarOpenButton.vue";
-import Banner from "@/Components/Shared/Banner.vue";
+import { ref } from 'vue';
+import Sidebar from '@/Components/Sidebar/Sidebar.vue';
+import MainHeader from '@/Components/Header/MainHeader.vue';
+import SidebarOpenButton from '@/Assets/SVG/Sidebar/SidebarOpenButton.vue';
+import Banner from '@/Components/Shared/Banner.vue';
 
 defineProps({
   title: String,
 });
 
 const isSidebarOpen = ref(true);
+const isLoading = ref(true); // New variable for loading state
 
 function toggleSidebar() {
   isSidebarOpen.value = !isSidebarOpen.value;
 }
 
+// Simulate an asynchronous operation (e.g., fetching data from an API)
+// Replace this with your actual data loading logic
+setTimeout(() => {
+  isLoading.value = false;
+}, 2000);
+
 </script>
 
 <template>
   <Banner />
-  <!-- Header -->
-  <div class="relative flex h-full w-full">
+
+  <!-- Header (conditionally rendered) -->
+  <div v-if="!isLoading" class="relative flex h-full w-full">
     <MainHeader/>
   </div>
+
   <!-- Page Heading -->
   <!-- Sidebar & Main Content -->
-  <main class="flex w-full flex-1 overflow-hidden" style="height: calc(100vh - 50px);">
+  <main v-if="!isLoading" class="flex w-full flex-1 overflow-hidden" style="height: calc(100vh - 50px);">
     <!-- Sidebar -->
     <Sidebar :is-open="isSidebarOpen" @update:is-open="isSidebarOpen = $event"/>
     <!-- Main Content -->
@@ -40,4 +49,9 @@ function toggleSidebar() {
       <slot />
     </div>
   </main>
+
+  <!-- Loading Screen -->
+  <div v-else class="flex items-center justify-center h-screen">
+    <div class="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-orange-600" />
+  </div>
 </template>
