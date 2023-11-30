@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\UsersResource\Pages;
-use App\Filament\Resources\UsersResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
@@ -23,6 +22,9 @@ class UsersResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
     protected static ?string $navigationGroup = 'User Management';
+
+    protected static ?string $recordTitleAttribute = 'username';
+
 
     public static function form(Form $form): Form
     {
@@ -45,7 +47,9 @@ class UsersResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('username'),
                 Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('customer'),
                 Tables\Columns\TextColumn::make('role'),
                 Tables\Columns\TextColumn::make('created_at')
             ])
