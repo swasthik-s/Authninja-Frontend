@@ -21,10 +21,13 @@ AuthNinja is a new cloud-based authentication system that provides a comprehensi
 AuthNinja is also a very secure authentication system. It uses state-of-the-art security algorithms to protect user data, and it is fully compliant with all major security standards.
 
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
+## Programming Language Used
+- User panel - Jetstream
+- Admin Panel - FilamentPHP
+- Framework - Laravel
+- Core Language - PHP
+- Styling - TailwindCSS
+- Authentication -Fortify and Livewire
 
 ## Contributing
 
