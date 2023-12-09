@@ -5,3 +5,90 @@
 [x-cloak] {
     display: none;
 }
+
+.scrolling-border {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #e2e8f0;
+    /* Change color as needed */
+    z-index: 1000;
+    /* Adjust z-index based on your layout */
+}
+
+/* Add custom styles here */
+.glow-on-hover {
+    transition: box-shadow 0.3s;
+    /* Add a smooth transition for the glow effect */
+}
+
+.glow-on-hover:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Set the box-shadow to create the glow effect */
+}
+
+/* Add styles for the fixed header */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index as needed */
+    /* Add any additional styles for the fixed header */
+}
+
+.border-b-2 {
+    border-bottom-width: 0.1vh;
+    border-bottom-color: #6b7280; /* Change to your desired zinc-800 color */
+}
+
+
+@keyframes flowGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+/* Apply the styles to the element */
+.moving-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(90% 60% at 50% -20%, hsl(206, 81.9%, 65.3%, 0.5), rgba(180, 9, 9, 0));
+    background-size: 200% 200%;
+    animation: rotateGradient 20s linear infinite; /* Adjust the duration as needed */
+}
+
+.animate-starlight-right {
+    animation: starlight-right 4s cubic-bezier(.6,.6,0,1) infinite;
+}
+
+@keyframes starlight-right {
+    0% {
+        transform: translate(-100%)
+    }
+
+    50%,to {
+        transform: translate(100%)
+    }
+}
+
+@keyframes starlight-left {
+    0% {
+        transform: translate(100%)
+    }
+
+    50%,to {
+        transform: translate(-100%)
+    }
+}
+
+.animate-starlight-left {
+    animation: starlight-left 4s cubic-bezier(.6,.6,0,1) 2s infinite
+}
