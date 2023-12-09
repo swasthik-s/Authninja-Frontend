@@ -23,7 +23,6 @@ setTimeout(() => {
 }, 2000);
 
 </script>
-
 <template>
   <Banner />
 
