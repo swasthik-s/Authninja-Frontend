@@ -1,32 +1,33 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
-import forms from '@tailwindcss/forms';
-import typography from '@tailwindcss/typography';
+import defaultTheme from "tailwindcss/defaultTheme";
+import forms from "@tailwindcss/forms";
+import typography from "@tailwindcss/typography";
 
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
-        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        './vendor/laravel/jetstream/**/*.blade.php',
-        './storage/framework/views/*.php',
-        './resources/views/**/*.blade.php',
-        './resources/js/**/*.vue',
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+        "./vendor/laravel/jetstream/**/*.blade.php",
+        "./storage/framework/views/*.php",
+        "./resources/views/**/*.blade.php",
+        "./resources/js/**/*.vue",
+        "./node_modules/tw-elements/dist/js/**/*.js",
     ],
 
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                current: 'currentColor',
-                'white': '#ffffff',
-                'purple': '#3f3cbb',
-                'midnight': '#121063',
-                'metal': '#565584',
-                'tahiti': '#3ab7bf',
-                'silver': '#ecebff',
-                'bubble-gum': '#ff77e9',
-                'bermuda': '#78dcca',
+                current: "currentColor",
+                white: "#ffffff",
+                purple: "#3f3cbb",
+                midnight: "#121063",
+                metal: "#565584",
+                tahiti: "#3ab7bf",
+                silver: "#ecebff",
+                "bubble-gum": "#ff77e9",
+                bermuda: "#78dcca",
             },
         },
     },
@@ -34,6 +35,9 @@ export default {
     plugins: [
         forms,
         typography,
-        require('tailwind-scrollbar'),
+        require("tailwind-scrollbar"),
+        require("tailwindcss-filters"),
+        require("tw-elements/dist/plugin.cjs"),
     ],
+    darkMode: "class",
 };
